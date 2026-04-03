@@ -1,0 +1,177 @@
+.quiz {
+  animation: slideIn 0.4s ease;
+}
+
+@keyframes slideIn {
+  from { opacity: 0; transform: translateX(30px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.questionCount {
+  font-size: 0.9rem;
+  color: var(--text-light);
+  font-weight: 500;
+}
+
+.scoreDisplay {
+  background: linear-gradient(135deg, #6c63ff, #ff6584);
+  color: #fff;
+  padding: 4px 14px;
+  border-radius: 50px;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.questionBox {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  margin-bottom: 28px;
+}
+
+.questionNumber {
+  background: var(--primary);
+  color: #fff;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 0.9rem;
+  flex-shrink: 0;
+}
+
+.questionText {
+  font-size: 1.2rem;
+  font-weight: 600;
+  line-height: 1.5;
+  color: var(--text);
+  padding-top: 6px;
+}
+
+.options {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+.option {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 14px 18px;
+  border: 2px solid var(--border);
+  border-radius: 12px;
+  background: #fff;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-align: left;
+  width: 100%;
+}
+
+.option:hover:not(:disabled) {
+  border-color: var(--primary);
+  background: #f5f4ff;
+  transform: translateX(4px);
+}
+
+.optionSelected {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 14px 18px;
+  border: 2px solid var(--primary);
+  border-radius: 12px;
+  background: #f5f4ff;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-align: left;
+  width: 100%;
+}
+
+.optionCorrect {
+  border-color: var(--success) !important;
+  background: #f0fdf6 !important;
+}
+
+.optionWrong {
+  border-color: var(--danger) !important;
+  background: #fff5f5 !important;
+}
+
+.optionLetter {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: var(--bg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 0.85rem;
+  flex-shrink: 0;
+  color: var(--primary);
+}
+
+.optionText {
+  flex: 1;
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: var(--text);
+}
+
+.optionIcon {
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+
+.explanation {
+  padding: 16px 20px;
+  border-radius: 12px;
+  margin-bottom: 20px;
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+.explanation p {
+  margin-top: 6px;
+  color: var(--text);
+}
+
+.explanationCorrect {
+  background: #f0fdf6;
+  border-left: 4px solid var(--success);
+}
+
+.explanationWrong {
+  background: #fff5f5;
+  border-left: 4px solid var(--danger);
+}
+
+.nextBtn {
+  width: 100%;
+  margin-top: 4px;
+}
+
+.finishing {
+  text-align: center;
+  color: var(--text-light);
+  font-style: italic;
+  padding: 12px;
+  animation: pulse 1s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.5; }
+}
